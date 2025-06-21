@@ -14,14 +14,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { Button } from "@/components/ui/button";
-import { SidebarSeparator, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
 	const { setTheme } = useTheme();
 	// const { toggleSidebar } = useSidebar();
 	return (
-		<nav className="p-4 flex items-center justify-between">
+		<nav className="sticky top-0 z-50 p-4 flex items-center justify-between bg-white dark:bg-transparent">
 			{/* LEFT */}
 			<SidebarTrigger />
 			{/* <Button variant="outline" onClick={toggleSidebar}>

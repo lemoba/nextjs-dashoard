@@ -27,7 +27,6 @@ import {
 	SidebarMenuSub,
 	SidebarMenuSubButton,
 	SidebarMenuSubItem,
-	SidebarSeparator,
 } from "@/components/ui/sidebar";
 import Link from "next/link.js";
 import Image from "next/image.js";
@@ -81,7 +80,7 @@ const AppSidebar = () => {
 						<SidebarMenuButton asChild>
 							<Link href="#">
 								<Image src="/logo.svg" alt="Logo" height={30} width={30} />
-								<span>FunReels</span>
+								<span className="text-lg font-medium">FunReels</span>
 							</Link>
 						</SidebarMenuButton>
 					</SidebarMenuItem>
