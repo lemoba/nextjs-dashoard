@@ -1,17 +1,17 @@
 "use client";
 
-import Link from "next/link";
-import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
+	DropdownMenuGroup,
 	DropdownMenuItem,
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-	DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
+import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { SidebarTrigger } from "@/components/ui/sidebar";
@@ -21,7 +21,12 @@ const Navbar = () => {
 	const { setTheme } = useTheme();
 	// const { toggleSidebar } = useSidebar();
 	return (
-		<nav className="sticky top-0 z-50 p-4 flex items-center justify-between bg-white dark:bg-transparent">
+		<nav
+			className="sticky top-0 z-50 p-4 flex items-center justify-between"
+			style={{
+				backgroundColor: "var(--background)", // 直接绑定 CSS 变量
+			}}
+		>
 			{/* LEFT */}
 			<SidebarTrigger />
 			{/* <Button variant="outline" onClick={toggleSidebar}>
